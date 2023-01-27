@@ -13,6 +13,8 @@
   <div class="container mt-5">
     <div class="card">
       <center class="card-header position-relative">
+        <h3>Filter Berdasarkan Area dan tanggal</h3>
+        <br />
         <form action="<?php echo base_url() ?>" method="post">
             <label for="area_name">Area Name:</label>
               <select name="area_name">
@@ -29,6 +31,7 @@
             <input type="date" name="date_to" value="<?php echo date('Y-m-d') ?>">
             <input type="submit" value="Filter">
             <button onclick="window.print()">view</button>
+            <a href="<?php echo base_url().'chart/alldata' ?>" class="btn btn-success btn-sm">All Data</a>
         </form>
       </center>
     </div>
@@ -110,71 +113,5 @@
       </table>
     </center>
   </div>
-
-<!-- <div class="container">
-    <script>
-      const ctx = document.getElementById('myChart');
-    
-      var data = {
-        labels: ['DKI Jakarta', 'Jawa Barat', 'Kalimantan', 'Jawa Tengah', 'Bali'],
-        datasets: [
-          {
-            label: 'ROTI TAWAR',
-            data: [<?php echo $nilai1; ?>, <?php echo $nilai2; ?>, <?php echo $nilai3; ?>, <?php echo $nilai4; ?>, <?php echo $nilai5; ?>],
-            backgroundColor: '#f44336',
-            borderWidth: 1
-          },
-          {
-            label: 'SUSU KALENG',
-            data: [<?php echo $nilai6; ?>, <?php echo $nilai7; ?>, <?php echo $nilai8; ?>, <?php echo $nilai9; ?>, <?php echo $nilai10; ?>],
-            backgroundColor: '#3f51b5',
-            borderWidth: 1
-          }
-        ]
-      };
-    
-      var options = {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      };
-    
-      var chart = new Chart(ctx, {
-        type: 'bar',
-        data: data,
-        options: options
-      });
-    </script>
-    
-    <table border="1">
-        <tr>
-            <th>Brand</th>
-            <th>DKI Jakarta</th>
-            <th>Jawa Barat</th>
-            <th>Kalimantan</th>
-            <th>Jawa Tengah</th>
-            <th>Bali</th>
-        </tr>
-        <tr>
-            <td>ROTI TAWAR</td>
-            <td><?php echo $nilai1; ?>%</td>
-            <td><?php echo $nilai2; ?>%</td>
-            <td><?php echo $nilai3; ?>%</td>
-            <td><?php echo $nilai4; ?>%</td>
-            <td><?php echo $nilai5; ?>%</td>
-        </tr>
-        <tr>
-            <td>SUSU KALENG</td>
-            <td><?php echo $nilai6; ?>%</td>
-            <td><?php echo $nilai7; ?>%</td>
-            <td><?php echo $nilai8; ?>%</td>
-            <td><?php echo $nilai9; ?>%</td>
-            <td><?php echo $nilai10; ?>%</td>
-        </tr>
-    </table>
-    <div><?php echo $brand_name; ?></div>
-</div> -->
 </body>
 </html>

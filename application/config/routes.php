@@ -50,6 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'chart';
-$route['get_alldata'] = 'Chart/get_alldata';
+$route['alldata'] = 'Chart/alldata';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
